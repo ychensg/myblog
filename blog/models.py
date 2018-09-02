@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class BlogsPost(models.Model):
@@ -11,7 +12,8 @@ class Article(models.Model):
     category = models.CharField(u"博客标签",max_length = 50,blank = True)       #博客标签
     pub_date = models.DateTimeField(u"发布日期",auto_now_add = True,editable=True)       
     update_time = models.DateTimeField(u'更新时间',auto_now=True,null=True)
-    content = models.TextField(blank=True, null=True)  # 博客文章正文
+    #content = models.TextField(blank=True, null=True)  # 博客文章正文
+    content = RichTextField('文章标题')
  
     def __unicode__(self):
         return self.title

@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_^_lreb)nnq&x2e5j&socl0&n*o+qib!*pjyo-$mdutyl+5+9&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['ychen.site','www.ychen.site','127.0.0.1']
 
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -118,6 +120,23 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': (
+			['div','Source','-'], 
+			['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print','SpellChecker','Scayt'], 
+			['Undo','Redo','-','Find','Replace','-'], 
+			['Bold','Italic','Underline','Strike','RemoveFormat','-'], 
+			['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'], 
+			['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'], 
+			['Link','Unlink'], 
+			['Image','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'], 
+			['Styles','Format','Font','FontSize'], 
+			['TextColor','BGColor'], 
+			['Maximize','ShowBlocks','-','About', 'pbckcode'],
+		),
+	}
+}
 
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
@@ -126,3 +145,7 @@ STATICFILES_DIRS = (
     ("js", os.path.join(STATIC_ROOT,'js')),
     ("images", os.path.join(STATIC_ROOT,'images')),
 )
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+CKEDITOR_UPLOAD_PATH = "article_images"

@@ -7,5 +7,6 @@ urlpatterns = [
     path('post/<int:id>',views.Detail,name="blog_detail"),
     path('home/',views.Home,name="blog_home"),
     path('test/',views.Test,name="blog_test"),
+    path('ckeditor/',include('ckeditor_uploader.urls')),
     path('', RedirectView.as_view(url="/home")),
 ]
