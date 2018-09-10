@@ -122,19 +122,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': (
-			['div','Source','-'], 
-			['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print','SpellChecker','Scayt'], 
+        'toolbar':[
+			['Source','codesnippet','-'], 
+			['Cut','Copy','Paste','PasteFromWord','-','Print','SpellChecker','Scayt'], 
 			['Undo','Redo','-','Find','Replace','-'], 
 			['Bold','Italic','Underline','Strike','RemoveFormat','-'], 
-			['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'], 
+			['NumberedList','BulletedList','-','Indent','Outdent','Blockquote'], 
 			['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'], 
 			['Link','Unlink'], 
 			['Image','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'], 
 			['Styles','Format','Font','FontSize'], 
 			['TextColor','BGColor'], 
-			['Maximize','ShowBlocks','-','About', 'pbckcode'],
-		),
+			['Maximize','ShowBlocks','-','About' ],
+	],
 	}
 }
 
