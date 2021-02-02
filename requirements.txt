@@ -1,6 +1,6 @@
 asn1crypto==0.24.0
 backcall==0.1.0
-bleach==2.1.4
+bleach==3.3.0
 bootstrap-admin==0.4.0
 cffi==1.11.5
 cryptography==2.3.1
